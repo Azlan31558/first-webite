@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movers loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-image: url(/slider-2.png);
+            background-size: cover;
+            background-position: center;
+            height: 99vh;
+
+        }
+
+        nav .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 2px solid grey; */
+            background-color: #d9dfdd;
+            height: 90px;
+            width: 100%;
+
+        }
+
+        header {
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+
+        li {
+            display: inline;
+            padding: 10px;
+        }
+
+        li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            padding: 17px 0px;
+            color: #012863;
+            height: 30px;
+            text-transform: uppercase;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        li a:hover {
+            color: #db1c29;
+            transition: all 0.3s ease-out 0.6s;
+        }
+
+        .box {
+            border: 2px solid saddlebrown;
+            padding: 12px 22px;
+            height: 60px;
+            display: flex;
+            border: none;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            background-color: #db1c29;
+            clip-path: polygon(11% 0, 100% 0, 89% 100%, 0 100%);
+        }
+
+        .box:hover {
+            background-color: #012863;
+            transition: all 1s ease-out 0.6s;
+            color: white;
+        }
+
+        .content {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-family: "Oswald", sans-serif;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            top: 100px;
+            color: #012863;
+            z-index: 0px;
+        }
+
+        h1 {
+            font-weight: 800;
+        }
+
+        .circle {
+            border: none;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #fff;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            left: 550px;
+            box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+            animation: pulse 2s infinite;
+            transition: all 0.7s ease-in-out 0.8s;
+        }
+
+        .circle:hover {
+            background-color: #db1c29;
+            transition: all 0.5s ease-out 0.6s;
+            color: #fff;
+        }
+
+        section {
+            padding-left: 1px;
+        }
+
+        section {
+            margin-top: 100px;
+        }
+
+        .first {
+            color: #db1c29;
+        }
+
+        .first h2 {
+            color: #012863;
+            font-size: 1.9em;
+        }
+
+        .containerb {
+            height: 210px;
+            width: 200px;
+            /* border: 2px solid saddlebrown; */
+            margin: 10px 18px;
+            padding: 10px;
+            padding-top: 50px;
+        }
+
+        .containerc {
+            height: 310px;
+            width: 400px;
+            /* border: 2px solid saddlebrown; */
+            margin: 10px 18px;
+            padding: 10px;
+            
+            background-color: #d9dfdd;
+        }
+
+        .containerc {
+            /* padding-top: 50px; */
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .containerc:hover{
+            background-color: rgba(10, 10, 210, 0.6);
+            transition: all ease-out 1s;
+            transform: skewy(-5deg);
+        }
+        .head{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .secbox{
+            height: 100px;
+            width: 100%;
+            border: 2px solid slateblue;
+        }
+        .secbox{
+            background-image: url(/gallery-03.jpg);
+            background-color: khaki;
+            /* z-index: 10px; */
+            /* opacity: 60%; */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border: none;
+            
+            
+        }
+        .secbox{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-style: italic;
+            font-size: 2em;
+            font-weight: bolder;
+            z-index: 0;
+            color:white;
+            margin: 50px 0;
+
+        }
+        .secbox .box{
+            background: transparent;
+            border: 7px solid white;
+        }
+        .secbox .box a{
+        font-size: 19px !important; 
+        border: #d9dfdd ;
+        border-left: 10px;
+        background: transparent;
+        color: #d9dfdd;
+        text-decoration: none;
+        }
+        .secbox .box:hover{
+            background: #d9dfdd;
+        }
+        .secbox .box a:hover{
+            color: black;
+            font-size: 2em;
+            transition: all ease 0s !important;
+        }
+        .containerd{
+            margin: 50px;   
+        }
+        .pic{
+            display: flex;
+        }
+        .conta,.contb,.contc{
+            height: 350px;
+            transform: skewy(-1deg);
+            width: 550px;
+            margin: 16px;
+            /* border: 2px solid saddlebrown;    */
+            overflow: hidden;
+        }
+        .conta:hover img{
+            transform:scale(1.1);
+
+
+            
+        }
+        .contb:hover img{
+            transform:scale(1.1);
+            
+        }
+        .contc:hover img{
+            transform:scale(1.1);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav">
+                    <img src="/logo.png" height="36px" alt="Error">
+                    <ul>
+                        <li><a href="/gallery-03.jpg">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Pricing</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                    <div class="box">Get Estimation</div>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <h1>Transport Anythingh</h1>
+            <span>
+                <h1>
+                    From Anywhere.
+                </h1>
+            </span>
+            <div class="circle">&downarrow;</div>
+
+        </div>
+    </div>
+    <section>
+        <div class="containerb">
+            <div class="first">
+                CHOOSE ME
+                <h2>WHY CHOOSE <BR>US ?</BR></h2>
+            </div>
+        </div>
+        <div class="containerc">
+            <div class="head">
+            <h2>PAYMENT MADE <BR>EASY</BR></h2>
+            <p>Our payment options are designed to be flexible, accommodating bank transfers (WIRE or ACH), credit
+                cards, and checks.
+            </p>
+        </div>
+        </div>
+        <div class="containerc">
+            <div class="head">
+            <h2>PAYMENT MADE <BR>EASY</BR></h2>
+            <p>Our payment options are designed to be flexible, accommodating bank transfers (WIRE or ACH), credit
+                cards, and checks.
+            </p>
+        </div>
+        </div>
+        <div class="containerc">
+            <div class="head">
+            <h2>PAYMENT MADE <BR>EASY</BR></h2>
+            <p>Our payment options are designed to be flexible, accommodating bank transfers (WIRE or ACH), credit
+                cards, and checks.
+            </p>
+        </div>
+        </div>
+    </section>
+    <div class="secbox">
+        <h2>New to Movers Dispatch service? need help?</h2>
+        <div class="box">
+            <a href="#">GET A QUOTES</a>
+        </div>
+
+    </div>
+    <main>
+        <div class="picture">
+        <div class="containerd">
+            <div class="con" style="color: #db1c29; font-size: 1.4em;">
+                Explore recent works
+                <h2 style="color: #012863; font-size: 3em;">Managing Logistics For World’s <br>Best Companies.</BR></h2>
+            </div>
+        </div>
+        <div class="pic">
+            <div class="conta">
+                <img src="/gallery-01.jpg" alt="">
+
+            </div>
+            <div class="contb">
+                <img src="/gallery-02.jpg" alt="">
+            </div>
+            <div class="contc">
+                <img src="/gallery-03.jpg" alt="">
+            </div>
+
+        </div>
+        
+    </div>  
+    </main>
+</body>
+
+</html>
